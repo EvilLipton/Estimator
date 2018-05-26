@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSans/OpenSansRegular.eot");
+  src: url("../fonts/OpenSans/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSans/OpenSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("../fonts/OpenSans/OpenSansLight.eot");
+  src: url("../fonts/OpenSans/OpenSansLight.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSansLight.woff") format("woff"), url("../fonts/OpenSans/OpenSansLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/OpenSans/OpenSansBold.eot");
+  src: url("../fonts/OpenSans/OpenSansBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSansBold.woff") format("woff"), url("../fonts/OpenSans/OpenSansBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+body {
+  background: #fafafa;
+  margin: 0;
+  font-family: "OpenSansLight";
+}
+.home-flex {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.home-page_image {
+  margin: 20px;
+}
+.home-page-text_area {
+  color: #3f5060;
+  font-size: 35px;
+  font-family: "OpenSansLight";
+}
+.home-page-helping-text-area {
+  color: #77838e;
+  font-size: 20px;
+  margin: 5px;
+  font-family: "OpenSansLight";
+}
+.home-page-button {
+  margin: 30px;
+}
+.home-page-button_size_color {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 13px;
+  border-radius: 4px;
+  background: #427cac;
+  box-shadow: 0 -1px #266396 inset;
+  transition: 0.2s;
+  font-family: "OpenSansLight";
+}
+.home-page-button_size_color:hover {
+  background: #1d4f78;
+}
+.home-page-button_size_color:active {
+  background: #427cac;
+  box-shadow: 0 2px #266396 inset;
+}
+.Main-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid whitesmoke;
+  /* Параметры границы */
+}
+.Text-header-page {
+  margin-left: 1%;
+  font-size: 20px;
+  font-family: "OpenSansLight";
+}
+.header-page-exit {
+  position: absolute;
+  display: flex;
+  right: 32px;
+  top: 17px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+}
+.header-page-exit:hover {
+  opacity: 1;
+}
+.header-page-exit:before,
+.header-page-exit:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+}
+.header-page-exit:before {
+  transform: rotate(45deg);
+}
+.header-page-exit:after {
+  transform: rotate(-45deg);
+}
+.body-page {
+  display: flex;
+  flex: 1;
+}
+.body-article {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  background: snow;
+}
+.body-aside {
+  flex: 0 0 20vw;
+  background: beige;
+}
+form {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid lavender;
+  border-radius: 5px;
+  margin: 10px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  margin: 10px;
+}
+.one-third-width {
+  width: 63.3%;
+}
+.two-third-width {
+  width: 36.6%;
+}
+.one-third-width,
+.two-third-width {
+  display: inline-block;
+  margin-right: -4px;
+}
+.version {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 10px;
+  padding: 2px 5px;
+  font-family: "OpenSansLight";
+  border: 1px solid lavender;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+.planed {
+  width: 97%;
+  height: 35px;
+  margin-bottom: 10px;
+  padding: 2px 5px;
+  font-family: "OpenSansLight";
+  border: 1px solid lavender;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+.time {
+  width: 97%;
+  height: 35px;
+  margin-bottom: 10px;
+  padding: 2px 5px;
+  font-family: "OpenSansLight";
+  border: 1px solid lavender;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+.first-text-form {
+  display: block;
+  flex-direction: row;
+}
+.text-form {
+  font-size: 25px;
+}
+hr {
+  border: 0.5px solid lavender;
+}
+input[type="submit"] {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0 5px;
+  padding: 6px 15px;
+  color: #94b4cf;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+.buttons {
+  margin-top: 10px;
+  text-align: center;
+}
+.form-text {
+  font-size: 13px;
+}
