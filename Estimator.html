@@ -10,10 +10,11 @@
     <body>
       <header>
         <div class = "Main-header">
-          <p class = "Text-header-page">
-            <strong>Sap</strong> Cloud Platform
-          </p>
-          <div class = "header-page-exit"></div>
+          <a class = "Text-header-page" href="#"><strong>SAP</strong> Cloud Platform</a>
+          <a class = "header-page-exit" href="#">
+            <span class = "header-page header-x">×</span>
+          <div class = "header-page header-page-exit-text">ESC</div>
+          </a>
         </div>
       </header>
       <div class = "body-page">
@@ -21,12 +22,18 @@
           <div class = "body-page text-form">
               <p><strong>Adjust your Products</strong></p>
             </div>
-              <form action="/echo" method="post">
-              <div class = "first-text-form">
-                 <img src="image/Photo-1.png" alt="">
+              <div class ="first-page-form">
+              <div class = "first-header-form">
+                <a class = "header-form-urn" href="#"> <img src="image/Urn.png" alt="urn"></a>
+                <div class = "image-form">
+                  <img src="image/Photo-1.png" alt="">
+                </div>
+                <a class = "header-form-text" href="#">SAP Cloudplatform Product Name</a>
+                <div class = "header-form-pod-text">Lorem ipsum dolor sit amet, perspiciatis similique?</div>
               </div>
-                  <hr>
+                  <div class = "first-page-line">
                     <div class="form-select-first">
+                      <form action="/echo" method="post">
                    <label for="version">Which version do you need?</label>
                    <select class ="version" name="version">
                        <optgroup label="Version 1x">
@@ -62,18 +69,44 @@
                               <option value="Hours/Days">Hours/Days</option>
                       </select>
                     </div>
-                    <hr>
-                    <div class = "form-text">
-                          One time Fee:<br>
-                          <strong>{Amout}</strong>
                     </div>
-                </form>
-                <form action="/echo" method="post">
-                <div class = "first-text-form">
-                   <img src="image/Photo-1.png" alt="">
+                    <div class = "footer-form-text">
+                      <div class = "pricing">
+                          <div class = "pricing-item pricing-item-left">
+                            <div class = "pricing-label">
+                                <span>One time Fee:</span>
+                            </div>
+                            <strong>{Amout}</strong>
+                        </div>
+                        <div class = "pricing-item pricing-item-left">
+                          <div class = "pricing-label">
+                              <span>Reoccuring Fee:</span>
+                          </div>
+                          <strong>{Amout}</strong> /MONTH
+                      </div>
+                      <div class = "pricing-item pricing-item-right">
+                        <div class = "pricing-label">
+                            <strong><span>{Amount}</span></strong>
+                        </div>
+                         /MONTH
+                    </div>
+                      </div>
+                    </div>
+                    </form>
                 </div>
-                    <hr>
+                <!-- НАЧАЛО ВТОРОЙ ФОРМЫ  -->
+                <div class ="first-page-form">
+                <div class = "first-header-form">
+                  <a class = "header-form-urn" href="#"> <img src="image/Urn.png" alt="urn"></a>
+                  <div class = "image-form">
+                    <img src="image/Photo-2.png" alt="">
+                  </div>
+                  <a class = "header-form-text" href="#">Product Name</a>
+                  <div class = "header-form-pod-text">Lorem Libero quo at dicta, a id eaque nam illum maxime nesciunt expedita placeat quis quasi, autem qui repellat eum eius, commodi soluta. unt reprehenderit maiores! ipsum dolor sit amet, </div>
+                </div>
+                    <div class = "first-page-line">
                       <div class="form-select-first">
+                        <form action="/echo" method="post">
                      <label for="version">Which version do you need?</label>
                      <select class ="version" name="version">
                          <optgroup label="Version 1x">
@@ -93,7 +126,7 @@
                  </div>
                       <div class="one-third-width">
                         <label for="planed">What is you planed usage?</label>
-                        <select class ="planed" name="planedplaned">
+                        <select class = "planed" name="planed">
                                 <option value="10">10</option>
                                 <option value="11">11</option>
                                 <option value="12">12</option>
@@ -109,19 +142,39 @@
                                 <option value="Hours/Days">Hours/Days</option>
                         </select>
                       </div>
-                      <hr>
-                    <div>
-                          One time Fee:
-                    </div>
-              </form>
+                      </div>
+                      <div class = "footer-form-text">
+                        <div class = "pricing">
+                            <div class = "pricing-item pricing-item-left">
+                              <div class = "pricing-label">
+                                  <span>One time Fee:</span>
+                              </div>
+                              <strong>{Amout}</strong>
+                          </div>
+                          <div class = "pricing-item pricing-item-left">
+                            <div class = "pricing-label">
+                                <span>Reoccuring Fee:</span>
+                            </div>
+                            <strong>{Amout}</strong> /MONTH
+                        </div>
+                        <div class = "pricing-item pricing-item-right">
+                          <div class = "pricing-label">
+                              <strong><span>{Amount}</span></strong>
+                          </div>
+                           /MONTH
+                      </div>
+                        </div>
+                      </div>
+                      </form>
+                  </div>
               <div class="buttons">
                     <input type="submit" value="Add another project">
                 </div>
-
           </div>
           <div class = "body-page body-aside">
               <div class = "body-page body-aside_right">
-                wdw
+                <h2>Estimation Summary</h2>
+
               </div>
           </div>
       </div>
