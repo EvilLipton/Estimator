@@ -131,12 +131,12 @@ a {
 .body-article {
   flex: 1;
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   overflow-Y: auto;
   overflow-x: hidden;
+  height: calc(113.6vh);
   background-color: #fafafa;
 }
 .first-page-form {
@@ -212,6 +212,7 @@ label {
   padding-bottom: 15px;
 }
 .text-form {
+  display: block;
   font-size: 24px;
   font-weight: 400;
   color: #3F5060;
@@ -310,15 +311,15 @@ label {
   font-size: 12px;
 }
 .body-aside {
-  flex: 0 0 28vw;
+  flex: 0 0 30vw;
   float: left;
   height: 100%;
   border-left: 1px solid #E9EBEC;
 }
 .estimator-scrollable {
-  flex: 0 0 28vw;
+  flex: 0 0 30vw;
   position: relative;
-  height: calc(-90%);
+  height: calc(-190%);
   overflow-Y: auto;
   overflow-x: hidden;
 }
@@ -403,7 +404,6 @@ ul {
   line-height: 3px;
 }
 .estimator-price {
-  float: right;
   text-align: right;
   line-height: 0rem;
   padding-top: 2px;
@@ -414,17 +414,20 @@ ul {
   text-transform: uppercase;
   font-weight: 200;
 }
+.estimator-price-amount {
+  font-weight: 600;
+  padding-top: 6px;
+}
 .estimator-summary {
-  height: 0px;
+  height: 0;
+  width: 25.9%;
+  flex: 0 0 28vw;
   border-top: 1px solid #E9EBEC;
   position: absolute;
   bottom: 0;
   font-weight: 400;
   color: #9CA4AC;
   padding: 0 30px;
-}
-li.estimator-total:first-child {
-  padding-top: 4.5rem;
 }
 li.estimator-total {
   font-size: 1rem;
@@ -435,7 +438,50 @@ li.estimator-total {
   padding: .8125rem 0;
   position: relative;
 }
-.estimator-price-amount {
+.estimator-name-cost-footer {
+  font-size: 0.9rem;
+  line-height: 4px;
   font-weight: 600;
   padding-top: 6px;
+}
+.estimator-price-amount-footer {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-top: 6px;
+}
+.estimator-btns {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: calc(100%);
+  position: absolute;
+  bottom: 0;
+}
+.btn-outline-primary {
+  margin: 0 5px 0 5px;
+  min-width: 70px;
+  line-height: 1.25rem;
+  padding: .7625rem .8rem;
+  font-size: .875rem;
+  text-align: center;
+  color: #5496cd;
+  border-radius: .2rem;
+  border: 1px solid #5496cd;
+  transition: 0.4s;
+  font-family: "OpenSansLight";
+}
+.btn-outline-primary:hover {
+  border: 2px solid #5496cd;
+}
+.btn-outline-primary:active {
+  background: #427cac;
+  box-shadow: 0 2px #266396 inset;
+}
+.btn-pdf {
+  color: #ffffff;
+  font-weight: 600;
+  background-color: #5496cd;
+}
+.btn-pdf:hover {
+  background-color: #477fad;
 }
