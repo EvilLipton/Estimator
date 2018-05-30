@@ -31,17 +31,23 @@
 	}
 
 body {
+ 	display: block;
 	 margin: 0;
 	 font-family: "OpenSansLight";
+	 line-height: 1.2;
 }
 
-a{
+body, html{
+	height: 100%;
+}
+
+a {
 	text-decoration: none;
 }
 // первая страница
 .home-flex {
     width: 100%;
-    height: 100%;
+    height: 80%;
     position: fixed;
     display: flex;
     align-items: center;
@@ -146,55 +152,17 @@ a{
 	line-height: 1rem;
 	margin-right: 33px;
 }
-// ВОЗМОЖНАЯ КНОПКА ЗАКРЫТИЯ
-// .header-page-exit {
-// 	position: absolute;
-// 	display: flex;
-// 	right: 32px;
-// 	top: 17px;
-// 	width: 20px;
-// 	height: 20px;
-// 	opacity: 0.3;
-// }
-//
-// .header-page-exit {
-// 		&:hover {
-// 		opacity: 1;
-// 	}
-// }
-//
-// .header-page-exit {
-// 	&:before, &:after {
-// 		position: absolute;
-// 		left: 15px;
-// 		content: ' ';
-// 		height: 20px;
-// 		width: 2px;
-// 		background-color: #333;
-// 		}
-// }
-//
-// .header-page-exit {
-// 		&:before {
-// 	transform: rotate(45deg);
-// 		}
-// }
-//
-// .header-page-exit {
-// 		&:after {
-// 	transform: rotate(-45deg);
-// 		}
-// }
-
-// ВОЗМОЖНАЯ КНОПКА ЗАКРЫТИЯ
 
 // КОНЕЦ ВЫХОДА
-
 // РАСПОЛОЖЕНИЕ ЭЛЕМЕНТОВ В 1 БЛОКЕ СТРАНИЦЫ
 
 .body-page {
 	display: flex;
   flex: 1;
+}
+
+.scroll{
+	
 }
 
 .body-article {
@@ -204,15 +172,12 @@ a{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	overflow-y: scroll;
+	overflow-Y: auto;
+  overflow-x: hidden;
 	background-color: rgb(250,250,250);
 }
 
-// РАСПОЛОЖЕНИЕ БЛОКОВ ВО 2 СТРАНИЦЫ
 
-.body-aside {
-	flex: 0 0 28vw;
-}
 // КОНЕЦ РАСПОЛОЖЕНИЕ ЭЛЕМЕНТОВ
 
 // ФОРМА
@@ -231,6 +196,7 @@ a{
 	padding: 20px;
 	border-top: 1px solid #E9EBEC;
 	border-bottom: 1px solid #E9EBEC;
+
 }
 
 label {
@@ -284,7 +250,7 @@ label {
 .time {
 	width: 100%;
 	height: 35px;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	padding: 2px 5px;
 	font-family: "OpenSansLight";
 	border: 1px solid lavender;
@@ -340,30 +306,60 @@ label {
 
 // КОНЕЦ ФОРМЫ
 // КНОПКА
-input[type="submit"] {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    margin: 0 5px;
-    padding: 6px 15px;
-    color: #94b4cf;
-    background: #ffffff;
-    border: none;
-    border-radius: 5px;
 
-}
-
-.buttons {
+.buttons-project {
+		display: block;
     margin-top: 10px;
     text-align: center;
+		border: 1px solid #5496cd;
+		text-decoration: none;
+		padding: .75rem 1.25rem;
+		font-weight: 400;
+		line-height: 1.25rem;
+		border-radius: 4px;
+  	color: #0070b1;
+		width: 61%;
+		transition: 0.2s;
+				&:hover  {
+				border: 2px solid rgb(29, 79, 120);
+				}
+					&:active {
+						border:  2px solid rgb(29, 79, 120);
+						}
 }
 // КОНЕЦ КНОПКИ
+// ТЕКСТ ФУТЕРА
+.footer-text{
+		display: block;
+		margin-top: 3.125rem;
+		border-top: 1px solid #E9EBEC;
+		padding-top: .725rem;
+		font-size: 0.6875rem;
+		text-align: left;
+		width: 66%;
+		font-family: "OpenSansLight";
+		}
 
+.estimator-disclamer{
+	font-weight: 400;
+}
+.estimator-disclamer-info{
+	color: #9CA4AC;
+	line-height: 14px;
+}
+
+.estimator-disclamer-interest{
+  margin: 15px 0;
+	color: #3F5060;
+	}
+
+//  КОНЕЦ ТЕКСТА ФУТЕРА
+// ФУТЕР У ФОРМЫ
 .footer-form-text {
 	padding-top: 0px;
   padding-bottom: 0px;
 }
-
+// КОНЕЦ ФУТЕР У ФОРМЫ
 .pricing{
 	overflow: hidden;
   font-weight: 400;
@@ -388,9 +384,164 @@ input[type="submit"] {
 	font-size: 12px;
 }
 
+// РАСПОЛОЖЕНИЕ БЛОКОВ ВО 2 СТРАНИЦЫ
+
+.body-aside {
+	flex: 0 0 28vw;
+	float: left;
+	height: 100%;
+	border-left: 1px solid #E9EBEC;
+}
 
 // ЭЛЕМЕНТЫ ВО ВТОРОМ БЛОКЕ
-.body-aside_right{
-		border-bottom: 1px solid #E9EBEC;
-    padding: 5px 30px 20px;
+
+.estimator-scrollable{
+	flex: 0 0 28vw;
+	position: relative;
+  height: calc(100% - 190px);
+  overflow-Y: auto;
+  overflow-x: hidden;
+
 }
+
+.estimator-list-header {
+	padding: 5px 25px 20px;
+	border-bottom: 1px solid #E9EBEC;
+}
+
+.estimator-list-headline{
+	line-height: 1.125rem;
+	font-size: 1.125rem;
+	font-weight: 400;
+	font-family: "OpenSansRegular";
+	margin-bottom: 0;
+}
+
+.estimator-remove-all{
+	color: #0070b1;
+	text-transform: uppercase;
+    position: absolute;
+    right: 30px;
+    top: 22px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+}
+
+.ng-star-inserted{
+	line-height: 0;
+  margin-top: 1rem;
+}
+
+.estimator-list-hint-indicator{
+	margin: 0 10px 0 0;
+    font-size: 0.75rem;
+}
+
+.sprite-icon{
+	max-height: 0.8125rem;
+    width: 0.8125rem;
+    margin-right: 2px;
+    fill: #0070B1;
+    stroke: #0070B1;
+}
+
+ul{
+	list-style: none;
+  padding-left: 0;
+	font-size: 13px;
+	color: #3f5060;
+}
+
+.estimator-list > li:not(:last-child){
+	border-bottom: 1px solid #E9EBEC;
+}
+
+.estimator-list > li
+{
+	overflow: hidden;
+	padding: 5px 20px;
+	font-family: "OpenSansRegular"
+}
+
+.estimator-list-img{
+	float: left;
+  margin-right: 15px;
+	display: block;
+}
+
+.product-img-small, .card-img-wrap{
+	margin-bottom: 0;
+	height: 35px;
+  width: 35px;
+  text-align: center;
+}
+
+.estimator-list-detail{
+	float: left;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 35px - 15px - 125px);
+}
+
+.img-right-side{
+	overflow: hidden;
+	text-align: center;
+	max-width: 35px;
+	max-height: 35px;
+  position: relative;
+ 	bottom: 20%;
+}
+// НУЖНОЕ СВОЙТВО
+.estimator-list-name {
+    white-space: nowrap;
+    line-height: 3px;
+
+}
+
+.estimator-price{
+	float: right;
+  text-align: right;
+  line-height: 0rem;
+  padding-top: 2px;
+}
+
+.estimator-price-label{
+	font-size: 0.625rem;
+	color: #9CA4AC;
+	text-transform: uppercase;
+	font-weight: 200;
+}
+
+// КНОПКИ И НИЗ ПРАВОЙ ЧАСТИ ФОРМЫ
+
+.estimator-summary{
+	height: 0px;
+	border-top: 1px solid #E9EBEC;
+	position: absolute;
+	bottom: 0;
+	font-weight: 400;
+	color: #9CA4AC;
+	padding: 0 30px;
+	}
+
+	li.estimator-total:first-child {
+	    padding-top: 4.5rem;
+	}
+
+	li.estimator-total {
+    font-size: 1rem;
+    color: #3F5060;
+    padding-bottom: .5rem;
+}
+
+.estimator-summary li {
+    padding: .8125rem 0;
+    position: relative;
+}
+
+.estimator-price-amount{
+	font-weight: 600;
+	padding-top: 6px;
+}
+// КОНЕЦ КНОПКИ И НИЗ ПРАВОЙ ЧАСТИ ФОРМЫ
