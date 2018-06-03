@@ -9,8 +9,8 @@
 </head>
     <body>
       <header>
-        <div class = "Main-header">
-          <a class = "Text-header-page" href="#"><strong>SAP</strong> Cloud Platform</a>
+        <div class = "main-header">
+          <a class = "text-header-page" href="#"><strong>SAP</strong> Cloud Platform</a>
           <a class = "header-page-exit" href="#">
             <span class = "header-page header-x">×</span>    <!-- Element esc from page -->
           <div class = "header-page header-page-exit-text">ESC</div>
@@ -19,6 +19,7 @@
       </header>
       <div class = "body-page">   <!-- all blocks on the page -->
         <div class = "body page body-article">   <!-- left side block -->
+           <button class="btn btn_trigger_aside"></button>
           <div class = "body-page body-article_text-form">    <!-- table of contents -->
               <p><strong>Adjust your Products</strong></p>
             </div>
@@ -389,11 +390,40 @@
                     <a class="btn-outline-primary" href="https://cloudplatform.sap.com/contact.html">Contact Us</a>
                     <a class="btn-outline-primary" href="">Share Link</a>
                     <a class="btn-outline-primary btn-pdf" href="">Download PDF</a>
+
                 </li>
             </ul>
         </div>
             <!-- ENDS BUTTONS AND LOWER RIGHT PART OF THE BLOCK  -->
-          </div>
+
       </div>
+    </div>
+    <script src = "js/jquery-3.3.1.js"></script>
+  <script>
+    // const buttonTriggerAside = document.querySelector('.btn_trigger_aside');
+    // buttonTriggerAside.on('click', function(){
+    //   $('.body-aside').toggle('.body-aside_visible');
+    // });
+
+         $(".btn_trigger_aside").on('click', function(){
+        $('.body-aside').toggle('.body-aside');
+      });
+  </script>
     </body>
+  <!--
+  да    1. реализовать слайдер для правого блока начиная с laptop версии;      2.
+  да    2. подкллючить jquery для scripta;                                     1.
+        3. при нажатии на карзину должно появляться затемнее, реализовать для второй формы;  8.
+        4. убрать желательно все float они бесполезны при использовании flex;  9.
+        5. читабельность кода, убрать лишнии элементы, такие как flex: 0 0 30vw и поставить flex: grown 30vw;   11.
+        6. если успею реализовать, нормальную БЭМ методологию;                 12.
+        7. компоненты неправильно разбиты, почти для каждого блока писать свой less;   13.
+        8. реализовать через media лаптоп и телефоннуб версию;                 3.
+  да    9. проблема с position: absolute разобраться;                          4.
+  да   10. убрать заглавные букввы у блоков такого не должно быть;             10.
+  да   11. разобраться с ~ В less;                                             5.
+  да   12. правую часть подправить, нижнюю часть блока не видит целый блок;    6.
+       13. использовать проценты для всего сайта, px не нужен;                 7.
+       14. Svg элементы вытянуть с того сайта где указаны координты, не ссылка. 14.
+      -->
 </html>

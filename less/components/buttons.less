@@ -82,3 +82,30 @@
     	}
 
     }
+
+// кнопка пвыкатывания правого блока
+    .btn_trigger_aside{
+      position: absolute;
+      height: 40px;
+      top: calc(45.4vh - 0);
+      bottom: 0;
+      left: 98%;
+      margin: auto 0;
+      display: block;
+      border: 0;
+      text-decoration: none;
+      outline: none;
+      font-weight: 400;
+      border-radius: 40px;
+      color: @color-honolulu-blue;
+      width: 3%;
+      transition: 0.2s;
+          &:hover  {
+          border: 2px solid @color-chatmas-blue;
+          outline: none;
+          }
+            &:active {
+              border:  2px solid @color-chatmas-blue;
+              outline: none;
+              }
+            }

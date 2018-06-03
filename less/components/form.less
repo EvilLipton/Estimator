@@ -4,6 +4,13 @@
 	padding: 20px;
 	padding-top: 22px;
   padding-bottom: 15px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+	@media @phone {
+		padding-top: 12px;
+		padding: 20px;
+	}
 }
 
 .header-form-urn {
@@ -19,13 +26,15 @@
 	color: @color-blue-black;
 	font-weight: 700;
 	line-height: 1.1;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
 	font-size: 1rem;
 	margin-top: 6px;
 	margin-bottom: 3px;
 	padding-right: 30px;
+
+	@media @phone {
+		font-size: 0.8rem;
+
+	}
 }
 
 .header-form_under-text{
@@ -36,6 +45,10 @@
   overflow: hidden;
   white-space: nowrap;
   padding-right: 30px;
+
+	@media @phone {
+	   padding-top: 6px;
+	}
 }
 
 .form-line{
@@ -48,12 +61,22 @@
 		display: inline-block;
 		margin-right: -4px;
     width: 63.3%;
+
+		@media @phone{
+			display: block;
+			width: 100%;
+		}
 }
 
 .form_under-third {
 		display: inline-block;
 		margin-right: -4px;
     width: 36.6%;
+
+		@media @phone{
+			display: block;
+			width: 100%;
+		}
 }
 
 .footer-text{
@@ -78,12 +101,28 @@
     	float: left;
     	margin-right: 30px;
     	font-size: 12px;
+
+			@media @phone{
+				float: none;
+				margin-right: auto;
+				margin-bottom: 10px;
+				padding: 5px;
+				text-align: center;
+				font-size: 13px;
+				border-bottom: 1px solid @color-grey-white;
+			}
     }
 
     .pricing-item-right{
     	float: right;
     	text-align: right;
     	font-size: 12px;
+
+			@media @phone{
+				float: none;
+				font-size: 13px;
+				text-align: center;
+			}
     }
 
     .form-footer-text {
