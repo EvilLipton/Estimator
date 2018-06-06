@@ -1,0 +1,7 @@
+.estimator-scrollable {
+  overflow-Y: auto;
+  overflow-x: hidden;
+  height: calc(70vh);
+  flex: 0 0 30vw;
+  position: relative;
+}

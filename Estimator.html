@@ -4,13 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
   <link rel="stylesheet" href="css/style.css">
   <title>Estimator</title>
 </head>
     <body>
-      <header>
+      <header class = "page-header">
         <div class = "main-header">
-          <a class = "text-header-page" href="#"><strong>SAP</strong> Cloud Platform</a>
+          <a class = "text-header-page" href="#">
+            <object class = "sap-logo" type="image/svg+xml" data="image/images-header/logo.svg"></object>
+          </a>
+          <span class = "mobile-menu">
+              <object class="mobile-menu__toggle_burger" type="image/svg+xml" data="image/images-header/list-with-dots.svg"></object>
+          </span>
           <a class = "header-page-exit" href="#">
             <span class = "header-page header-x">×</span>    <!-- Element esc from page -->
           <div class = "header-page header-page-exit-text">ESC</div>
@@ -19,7 +25,6 @@
       </header>
       <div class = "body-page">   <!-- all blocks on the page -->
         <div class = "body page body-article">   <!-- left side block -->
-           <button class="btn btn_trigger_aside"></button>
           <div class = "body-page body-article_text-form">    <!-- table of contents -->
               <p><strong>Adjust your Products</strong></p>
             </div>
@@ -86,10 +91,10 @@
                           <strong>{Amout}</strong> /MONTH
                       </div>
                       <div class = "pricing-item pricing-item-right">
-                        <div class = "form-pricing-label">
-                            <strong><span>{Amount}</span></strong>
+                        <div class = "form-pricing-label-general">
+                            <strong>{Amount}</strong>
                         </div>
-                         /MONTH
+                          <div class = "pricing-label-month">/MONTH</div>
                     </div>
                       </div>
                     </div>
@@ -97,6 +102,14 @@
                 </div>
                 <!-- THE BEGINNING OF THE SECOND FORM  -->
                 <div class ="page-form">
+                  <div class="product-remove-hover">
+                    <div class="product-remove-hover-content">
+                      <div class="product-remove-hover-headline">Remove this product?</div>
+                      <div class="product-remove-hover-info">Caution: All your entries will be lost!</div>
+                      <a class="btn btn-sm btn-secondary" href="">Remove</a>
+                      <a class="product-remove-hover-link" href="">Cancel</a>
+                    </div>
+                  </div>
                 <div class = "header-form">
                   <a class = "header-form-urn" href="#"> <img src="image/Urn.png" alt="urn"></a>
                   <div class = "image-form">
@@ -159,10 +172,10 @@
                             <strong>{Amout}</strong> /MONTH
                         </div>
                         <div class = "pricing-item pricing-item-right">
-                          <div class = "form-pricing-label">
+                          <div class = "form-pricing-label-general">
                               <strong><span>{Amount}</span></strong>
                           </div>
-                           /MONTH
+                           <div class = "pricing-label-month">/MONTH</div>
                       </div>
                         </div>
                       </div>
@@ -199,18 +212,13 @@
                 <a class = "estimator-remove-all" href="#" >remove all</a>
                 </div>
                   <h2 class = "estimator-list-headline">Estimation Summary</h2>
-
-                  <div class="estimator-list-hint-indicators ng-star-inserted">
+                  <div class="estimator-list-hint-indicators svg-left-side">
               <span class="estimator-list-hint-indicator">
-                <svg class="sprite-icon">
-                  <!-- <use class="ng-tns-c16-1" xlink:href="https://cloudplatform.sap.com/dmp/capabilities/us(estimator:estimator/noScroll)#subscription"></use> -->
-                </svg>
+                   <object class = "image-subscription" type="image/svg+xml" data="image/Images-form-body-aside/subscription.svg"></object>
                 <span>Subscription</span>
               </span>
               <span class="estimator-list-hint-indicator">
-                <svg class="sprite-icon">
-                  <!-- <use class="ng-tns-c16-1" xlink:href="https://cloudplatform.sap.com/dmp/capabilities/us(estimator:estimator/noScroll)#cloudcredits"></use> -->
-                </svg>
+                  <object class = "sprite-icon image-subscription" type="image/svg+xml" data="image/Images-form-body-aside/cloud-credits.svg"></object>
                 <span>Cloud Credits</span>
               </span>
             </div>
@@ -219,7 +227,7 @@
           <li class="ng-star-inserted">
                     <scp-product-img class="estimator-list-img product-img-small" >
                       <div class="card-img-wrap">
-                        <img class="img-right-side" src="https://digitalmarketplace-sapcpprd.s3.eu-central-1.amazonaws.com/NXHHv5y8qZjiifaz6rmudNCPWlXv4IF2bHXxAHHkaqKVnkeYZr4auHcY7EwPoeoZ.svg" alt="icon of product SAP Predictive service">
+                        <img class="img-right-side" src="image/Images-form-body-aside/product-sap-predictive-service.svg" alt="icon of product SAP Predictive service">
                         </div>
                       </scp-product-img>
                     <div class="estimator-list-detail">
@@ -227,10 +235,12 @@
                         Product Name
                       </span>
                     <div class="estimator-list-hint ng-star-inserted">
-                        <svg class="sprite-icon ng-star-inserted">
-                          Subscription
-                          <use xlink:href="https://cloudplatform.sap.com/dmp/capabilities/us(estimator:estimator/noScroll)#subscription"></use>
-                        </svg>
+                      <span class="estimator-list-hint-svg">
+                           <object class = "image-subscription" type="image/svg+xml" data="image/Images-form-body-aside/subscription.svg"></object>
+                      </span>
+                      <span class="estimator-list-hint-svg">
+                          <object class = "sprite-icon image-subscription" type="image/svg+xml" data="image/Images-form-body-aside/cloud-credits.svg"></object>
+                      </span>
                       </div>
                     </div>
                     <div class="estimator-price">
@@ -245,7 +255,7 @@
   <li class="ng-star-inserted">
             <scp-product-img class="estimator-list-img product-img-small">
               <div class="card-img-wrap">
-                <img class="img-right-side" src="https://digitalmarketplace-sapcpprd.s3.eu-central-1.amazonaws.com/I8b4OT_Ign8tsfJWsGh6c31cNjN-tS3lSZnSQmn9nbvzVw5x6X3ue1V_dPcUhJgu.svg" alt="icon of product SAP Data Quality Management, microservices ">
+                  <img class="img-right-side" src="image/Images-form-body-aside/product-sap-predictive-service.svg" alt="icon of product SAP Predictive service">
                 </div>
               </scp-product-img>
             <div class="estimator-list-detail">
@@ -253,10 +263,7 @@
                 Product Name
               </span>
             <div class="estimator-list-hint ng-star-inserted">
-                <svg class="sprite-icon ng-star-inserted">
-                  Subscription
-                  <use xlink:href="https://cloudplatform.sap.com/dmp/capabilities/us(estimator:estimator/noScroll)#subscription"></use>
-                </svg>
+                <object class = "sprite-icon image-subscription" type="image/svg+xml" data="image/Images-form-body-aside/cloud-credits.svg"></object>
               </div>
             </div>
             <div class="estimator-price">
@@ -271,7 +278,7 @@
       <li class="ng-star-inserted">
                 <scp-product-img class="estimator-list-img product-img-small">
                   <div class="card-img-wrap">
-                    <img class="img-right-side" src="https://digitalmarketplace-sapcpprd.s3.eu-central-1.amazonaws.com/NXHHv5y8qZjiifaz6rmudNCPWlXv4IF2bHXxAHHkaqKVnkeYZr4auHcY7EwPoeoZ.svg" alt="icon of product SAP Predictive service">
+                    <img class="img-right-side" src="image/Images-form-body-aside/product-sap-predictive-service.svg" alt="icon of product SAP Predictive service">
                     </div>
                   </scp-product-img>
                 <div class="estimator-list-detail">
@@ -279,10 +286,7 @@
                     Product Name
                   </span>
                 <div class="estimator-list-hint ng-star-inserted">
-                    <svg class="sprite-icon ng-star-inserted">
-                      Subscription
-                      <use class="ng-tns-c16-1" xlink:href="https://cloudplatform.sap.com/dmp/capabilities/us(estimator:estimator/noScroll)#subscription"></use>
-                    </svg>
+                    <object class = "image-subscription" type="image/svg+xml" data="image/Images-form-body-aside/subscription.svg"></object>
                   </div>
                 </div>
                 <div class="estimator-price">
@@ -297,7 +301,7 @@
           <li class="ng-star-inserted">
                     <scp-product-img class="estimator-list-img product-img-small">
                       <div class="card-img-wrap">
-                        <img class="img-right-side" src="https://digitalmarketplace-sapcpprd.s3.eu-central-1.amazonaws.com/NXHHv5y8qZjiifaz6rmudNCPWlXv4IF2bHXxAHHkaqKVnkeYZr4auHcY7EwPoeoZ.svg" alt="icon of product SAP Predictive service">
+                        <img class="img-right-side" src="image/Images-form-body-aside/product-sap-predictive-service.svg" alt="icon of product SAP Predictive service">
                         </div>
                       </scp-product-img>
                     <div class="estimator-list-detail">
@@ -305,10 +309,7 @@
                         Product Name
                       </span>
                     <div class="estimator-list-hint ng-star-inserted">
-                        <svg class="sprite-icon ng-star-inserted">
-                          Subscription
-                          <use xlink:href="https://cloudplatform.sap.com/dmp/capabilities/us(estimator:estimator/noScroll)#subscription"></use>
-                        </svg>
+                      <object class = "sprite-icon image-subscription" type="image/svg+xml" data="image/Images-form-body-aside/cloud-credits.svg"></object>
                       </div>
                     </div>
                     <div class="estimator-price">
@@ -323,7 +324,7 @@
               <li class="ng-star-inserted">
                         <scp-product-img class="estimator-list-img product-img-small">
                           <div class="card-img-wrap">
-                            <img class="img-right-side" src="https://digitalmarketplace-sapcpprd.s3.eu-central-1.amazonaws.com/NXHHv5y8qZjiifaz6rmudNCPWlXv4IF2bHXxAHHkaqKVnkeYZr4auHcY7EwPoeoZ.svg" alt="icon of product SAP Predictive service">
+                              <img class="img-right-side" src="image/Images-form-body-aside/product-sap-predictive-service.svg" alt="icon of product SAP Predictive service">
                             </div>
                           </scp-product-img>
                         <div class="estimator-list-detail">
@@ -331,10 +332,7 @@
                             Product Name
                           </span>
                         <div class="estimator-list-hint ng-star-inserted">
-                            <svg class="sprite-icon ng-star-inserted">
-                              Subscription
-                              <use xlink:href="https://cloudplatform.sap.com/dmp/capabilities/us(estimator:estimator/noScroll)#subscription"></use>
-                            </svg>
+                            <object class = "image-subscription" type="image/svg+xml" data="image/Images-form-body-aside/subscription.svg"></object>
                           </div>
                         </div>
                         <div class="estimator-price">
@@ -349,7 +347,7 @@
                   <li class="ng-star-inserted">
                             <scp-product-img class="estimator-list-img product-img-small">
                               <div class="card-img-wrap">
-                                <img class="img-right-side" src="https://digitalmarketplace-sapcpprd.s3.eu-central-1.amazonaws.com/NXHHv5y8qZjiifaz6rmudNCPWlXv4IF2bHXxAHHkaqKVnkeYZr4auHcY7EwPoeoZ.svg" alt="icon of product SAP Predictive service">
+                                  <img class="img-right-side" src="image/Images-form-body-aside/product-sap-predictive-service.svg" alt="icon of product SAP Predictive service">
                                 </div>
                               </scp-product-img>
                             <div class="estimator-list-detail">
@@ -357,10 +355,7 @@
                                 Product Name
                               </span>
                             <div class="estimator-list-hint ng-star-inserted">
-                                <svg class="sprite-icon ng-star-inserted">
-                                  Subscription
-                                  <use  xlink:href="https://cloudplatform.sap.com/dmp/capabilities/us(estimator:estimator/noScroll)#subscription"></use>
-                                </svg>
+                                <object class = "image-subscription" type="image/svg+xml" data="image/Images-form-body-aside/subscription.svg"></object>
                               </div>
                             </div>
                             <div class="estimator-price">
@@ -387,7 +382,7 @@
                     </div>
                 </li>
                 <li class="estimator-btns">
-                    <a class="btn-outline-primary" href="https://cloudplatform.sap.com/contact.html">Contact Us</a>
+                    <a class="btn-outline-primary" href="#">Contact Us</a>
                     <a class="btn-outline-primary" href="">Share Link</a>
                     <a class="btn-outline-primary btn-pdf" href="">Download PDF</a>
 
@@ -395,19 +390,19 @@
             </ul>
         </div>
             <!-- ENDS BUTTONS AND LOWER RIGHT PART OF THE BLOCK  -->
-
       </div>
     </div>
     <script src = "js/jquery-3.3.1.js"></script>
   <script>
     // const buttonTriggerAside = document.querySelector('.btn_trigger_aside');
     // buttonTriggerAside.on('click', function(){
-    //   $('.body-aside').toggle('.body-aside_visible');
+    //   $('.body-aside').toggleClass('.body-aside_visible');
     // });
 
-         $(".btn_trigger_aside").on('click', function(){
-        $('.body-aside').toggle('.body-aside');
+         $(".mobile-menu__toggle_burger").on('click', function(){
+        $('.body-aside').toggleClass('body-aside_visible');
       });
+
   </script>
     </body>
   <!--

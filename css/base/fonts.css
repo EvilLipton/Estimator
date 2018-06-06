@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSans/OpenSansRegular.eot");
+  src: url("../fonts/OpenSans/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSans/OpenSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("../fonts/OpenSans/OpenSansLight.eot");
+  src: url("../fonts/OpenSans/OpenSansLight.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSansLight.woff") format("woff"), url("../fonts/OpenSans/OpenSansLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/OpenSans/OpenSansBold.eot");
+  src: url("../fonts/OpenSans/OpenSansBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSansBold.woff") format("woff"), url("../fonts/OpenSans/OpenSansBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}

@@ -3,16 +3,19 @@
 }
 
  .button_size_color {
-   font-weight: 700;
-   color: @color-white;
-   text-decoration: none;
-   font-size: 20px;
    padding: 13px;
-   border-radius: 4px;
+
+   font-size: 20px;
+   font-weight: 700;
+   font-family: "OpenSansLight";
+   text-decoration: none;
+   color: @color-white;
+
    background: @color-blue-white-under;
+   border-radius: 4px;
+
    box-shadow: 0 -1px @color-lapiz-lazuli inset;
    transition: 0.2s;
-   font-family: "OpenSansLight";
        &:hover  {
        background: @color-chatmas-blue;
        }
@@ -24,16 +27,19 @@
 
     .buttons-project {
     		display: block;
+        width: 61%;
         margin-top: 10px;
+        padding: .75rem 1.25rem;
+
         text-align: center;
-    		border: 1px solid @color-celestial-blue;
     		text-decoration: none;
-    		padding: .75rem 1.25rem;
     		font-weight: 400;
     		line-height: 1.25rem;
+        color: @color-honolulu-blue;
+
+        border: 1px solid @color-celestial-blue;
     		border-radius: 4px;
-      	color: @color-honolulu-blue;
-    		width: 61%;
+
     		transition: 0.2s;
     				&:hover  {
     				border: 2px solid @color-chatmas-blue;
@@ -41,29 +47,33 @@
     					&:active {
     						border:  2px solid @color-chatmas-blue;
     						}
-    }
+            }
 
     .estimator-btns {
+      position: absolute;
+      bottom: 0;
+
     	display: flex;
+      width: 100%;
     	flex-wrap: nowrap;
     	justify-content: space-between;
-    	width: calc(100% - 0px);
-    	position: absolute;
-    	bottom: 0;
     }
 
     .btn-outline-primary {
-    		margin: 0 5px 0 5px;
         min-width: 70px;
+    		margin: 0 5px 0 5px;
+        padding: .7625rem .8rem;
+
+        font-size: .875rem;
+        text-align: center;
     		line-height: 1.25rem;
-    		padding: .7625rem .8rem;
-    		font-size: .875rem;
-    		text-align: center;
-    		color: @color-celestial-blue;
-    		border-radius: .2rem;
-    		border: 1px solid @color-celestial-blue;
-    		transition: 0.4s;
         font-family: "OpenSansLight";
+    		color: @color-celestial-blue;
+
+        border: 1px solid @color-celestial-blue;
+    		border-radius: .2rem;
+
+    		transition: 0.4s;
             &:hover  {
             border: 2px solid @color-celestial-blue;
             }
@@ -71,41 +81,41 @@
                 background: @color-blue-white-under;
                 box-shadow: 0 2px @color-lapiz-lazuli inset;
                 }
+
+            @media @phone{
+              padding: .1625rem .3rem;
+              margin: 0 5px 0 5px;
+            }
          }
 
-    .btn-pdf{
-    	color: @color-white;
+    .btn-pdf {
     	font-weight: 600;
-    	background-color: @color-celestial-blue;
-    	&:hover  {
-    	background-color: @color-blue-steel;
-    	}
+      color: @color-white;
 
+    	background-color: @color-celestial-blue;
+    	  &:hover  {
+    	   background-color: @color-blue-steel;
+    	}
     }
 
-// кнопка пвыкатывания правого блока
-    .btn_trigger_aside{
-      position: absolute;
-      height: 40px;
-      top: calc(45.4vh - 0);
-      bottom: 0;
-      left: 98%;
-      margin: auto 0;
-      display: block;
-      border: 0;
-      text-decoration: none;
-      outline: none;
-      font-weight: 400;
-      border-radius: 40px;
-      color: @color-honolulu-blue;
-      width: 3%;
-      transition: 0.2s;
-          &:hover  {
-          border: 2px solid @color-chatmas-blue;
-          outline: none;
-          }
-            &:active {
-              border:  2px solid @color-chatmas-blue;
-              outline: none;
-              }
-            }
+    @media @laptop {
+      .mobile-menu {
+        display: none;
+      }
+    }
+
+
+@media @phone
+ {
+  .mobile-menu__toggle_burger {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    right: 0;
+
+    max-height: 22px;
+    width: 35%;
+    margin-top: 9px;
+  }
+}

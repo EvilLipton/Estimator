@@ -1,35 +1,37 @@
 .estimator-list-header {
-	padding: 5px 25px 20px;
+	padding: 5px 25px 10px;
+	padding-bottom: 17px;
+
 	border-bottom: 1px solid @color-grey-white;
 }
 
-.estimator-list-headline{
-	line-height: 1.125rem;
+.estimator-list-headline {
 	font-size: 1.125rem;
-	font-weight: 400;
 	font-family: "OpenSansRegular";
-	margin-bottom: 0;
+	font-weight: 400;
 }
 
-.estimator-list > li:not(:last-child){
+.estimator-list > li:not(:last-child) {
 	border-bottom: 1px solid @color-grey-white;
 }
 
 .estimator-list > li {
-	overflow: hidden;
 	padding: 5px 20px;
+	overflow: hidden;
+
 	font-family: "OpenSansRegular";
 }
 
-.estimator-list-detail{
+.estimator-list-detail {
+	display: flex;
+	flex-direction: column;
 	float: left;
   height: 35px;
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 35px - 15px - 125px);
 }
 
 .estimator-list-name {
+	  margin-bottom: -6px;
+		
     white-space: nowrap;
     line-height: 3px;
 }
